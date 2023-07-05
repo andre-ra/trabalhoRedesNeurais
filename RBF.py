@@ -61,7 +61,7 @@ def treinamentoRBF(x, y , numNeuronios, n = 0.01, epsilon = 10**-7, th = 0):
 
         epocasPI += 1
 
-        print("Épocas parte inicial: " + str(epocasPI))
+    print("Épocas parte inicial: " + str(epocasPI))
 
     # Inicializa as outras variáveis
     yEst = np.zeros((m, y.shape[1]))
@@ -83,9 +83,7 @@ def treinamentoRBF(x, y , numNeuronios, n = 0.01, epsilon = 10**-7, th = 0):
         
         # Zera as derivadas e os vieses (biases)
         dW1 = 0
-        dB1 = 0
-        dW0 = 0
-        dB0 = 0    
+        dB1 = 0   
             
         for i in range(0,m):
             
@@ -129,16 +127,7 @@ def treinamentoRBF(x, y , numNeuronios, n = 0.01, epsilon = 10**-7, th = 0):
 
         epocas +=1
 
-    # Classifica as saídas estimadas e calcula a acurácia
-    yEstI = 1*(yEst>th)
-    yEstI[yEstI==0] = -1
-    
-    acuracia = 1 - np.sum(abs(y - yEstI)) / (2*m)
-
-    print("F: " + str(np.sum(abs(y - yEstI)/2)))
-
-    print("Acuracia: " + str(acuracia))
-    print("Épocas: " + str(epocas))
+    print("Épocas parte final: " + str(epocas))
     print("EQM: " + str(eqm))
 
     # Obtem a duração do treinamento

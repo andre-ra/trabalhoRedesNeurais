@@ -105,17 +105,8 @@ def treinamentoPMC2(x, y , numNeuronios, n = 0.01, epsilon = 10**-7, th = 0):
 
         epocas +=1
 
-        # Classifica as saídas estimadas e calcula a acurácia
-        yEstI = 1*(yEst>th)
-        yEstI[yEstI==0] = -1
-        
-        acuracia = 1 - np.sum(abs(y - yEstI)) / (2*m)
-
-        print("F: " + str(np.sum(abs(y - yEstI)/2)))
-
-        print("Acuracia: " + str(acuracia))
-        print("Épocas: " + str(epocas))
-        print("EQM final: " + str(eqm))
+    print("Épocas: " + str(epocas))
+    print("EQM final: " + str(eqm))
 
     # Obtem a duração do treinamento
     tempo_depois = time.time() 

@@ -35,7 +35,6 @@ def treinamentoLVQ(x, y , n = 0.01, epsilon = 10**-8):
         x = x[randomize] 
         y = y[randomize]
         w0Ant = w0
-        falhas = 0
 
         for i in range(0,m):
 
@@ -48,7 +47,6 @@ def treinamentoLVQ(x, y , n = 0.01, epsilon = 10**-8):
                 w0[vencedor] += n*(x[i] - w0[vencedor])
             else:
                 w0[vencedor] -= n*(x[i] - w0[vencedor])
-                falhas += 1
 
             # Normaliza os pesos ajustados
             norma = np.expand_dims(np.linalg.norm(w0, axis=1), axis=1)
@@ -57,7 +55,6 @@ def treinamentoLVQ(x, y , n = 0.01, epsilon = 10**-8):
         epocas += 1
 
     print("Épocas: " + str(epocas))
-    print("F: " + str(falhas))
 
     # Obtem a duração do treinamento
     tempo_depois = time.time() 

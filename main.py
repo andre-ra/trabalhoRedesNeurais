@@ -35,8 +35,8 @@ yValidacao[yValidacao==0] = -1.0
 mVal = xValidacao.shape[0]
 
 # Define os parâmetros de treinamento
-n = 10**-4
-epsilon = 10**-7
+n = 10**-3
+epsilon = 10**-5
 
 # CI = camadas intermediárias
 print("Rede PMC com 2 CI - 50 e 25 neurônios")
@@ -66,8 +66,8 @@ plt.plot(eqmLista1, label='50 e 25 neurônios')
 plt.plot(eqmLista2, label='25 e 15 neurônios')
 plt.plot(eqmLista3, label='15 e 10 neurônios')
 plt.legend(loc='best')
-plt.show()
-#plt.savefig("treinamento_"+str(j)+".png")
+#plt.show()
+plt.savefig("eqm_epoca_pmc2ci.png")
 
 # Plota o gráfico da curva ROC
 plt.figure()
@@ -78,7 +78,8 @@ plt.plot(especificidades1, sensibilidades1, label='50 e 25 neurônios')
 plt.plot(especificidades2, sensibilidades2, label='25 e 15 neurônios')
 plt.plot(especificidades3, sensibilidades3, label='15 e 10 neurônios')
 plt.legend(loc='best')
-plt.show()
+#plt.show()
+plt.savefig("roc_pmc2ci.png")
 
 
 print("Rede PMC com 1 CI - 50 neurônios")
@@ -90,13 +91,13 @@ especificidades1, sensibilidades1 = validacaoPMC1(xValidacao, yValidacao, w1, b1
 
 print("Rede PMC com 1 CI - 25 neurônios")
 
-w1, b1, w0, b0, eqmLista1 = treinamentoPMC1(xTreinamento, yTreinamento, [25,1], n, epsilon)
+w1, b1, w0, b0, eqmLista2 = treinamentoPMC1(xTreinamento, yTreinamento, [25,1], n, epsilon)
 
 especificidades2, sensibilidades2 = validacaoPMC1(xValidacao, yValidacao, w1, b1, w0, b0) 
 
 print("Rede PMC com 1 CI - 15 neurônios")
 
-w1, b1, w0, b0, eqmLista1 = treinamentoPMC1(xTreinamento, yTreinamento, [15,1], n, epsilon)
+w1, b1, w0, b0, eqmLista3 = treinamentoPMC1(xTreinamento, yTreinamento, [15,1], n, epsilon)
 
 especificidades3, sensibilidades3 = validacaoPMC1(xValidacao, yValidacao, w1, b1, w0, b0) 
 
@@ -107,7 +108,8 @@ plt.xlabel("Épocas")
 plt.plot(eqmLista1, label='50 neurônios')
 plt.plot(eqmLista2, label='25 neurônios')
 plt.plot(eqmLista3, label='15 neurônios')
-plt.show()
+#plt.show()
+plt.savefig("eqm_epoca_pmc1ci.png")
 
 # Plota o gráfico da curva ROC
 plt.figure()
@@ -118,7 +120,8 @@ plt.plot(especificidades1, sensibilidades1, label='50 neurônios')
 plt.plot(especificidades2, sensibilidades2, label='25 neurônios')
 plt.plot(especificidades3, sensibilidades3, label='15 neurônios')
 plt.legend(loc='best')
-plt.show()
+#plt.show()
+plt.savefig("roc_pmc1ci.png")
 
 
 print("Rede RBF - 50 neurônios")
@@ -146,7 +149,8 @@ plt.xlabel("Épocas")
 plt.plot(eqmLista1, label='50 neurônios')
 plt.plot(eqmLista2, label='25 neurônios')
 plt.plot(eqmLista3, label='15 neurônios')
-plt.show()
+#plt.show()
+plt.savefig("eqm_epoca_rbf.png")
 
 # Plota o gráfico da curva ROC
 plt.figure()
@@ -157,9 +161,11 @@ plt.plot(especificidades1, sensibilidades1, label='50 neurônios')
 plt.plot(especificidades2, sensibilidades2, label='25 neurônios')
 plt.plot(especificidades3, sensibilidades3, label='15 neurônios')
 plt.legend(loc='best')
-plt.show()
+#plt.show()
+plt.savefig("roc_rbf.png")
 
+print("Rede LVQ")
 
-w0, w0Classes = treinamentoLVQ(xTreinamento, yTreinamento, n, epsilon)
+w0, w0Classes = treinamentoLVQ(xTreinamento, yTreinamento, n)
 
 validacaoLVQ(xValidacao, yValidacao, w0, w0Classes) 
