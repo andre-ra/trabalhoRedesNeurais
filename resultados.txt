@@ -1,0 +1,89 @@
+Rede PMC com 2 CI - 50 e 25 neurônios
+Épocas: 1071
+EQM final: 0.24392666415039047
+Tempo de processamento: 178.7849452495575
+AUC: 0.9086538461538459
+AUC0.9: 0.7450466200466198
+Sensibilidade: 0.9615384615384616
+Especificidade: 0.6704545454545454
+Threshold: -0.6340000000000001
+Rede PMC com 2 CI -  25 e 15 neurônios
+Épocas: 2850
+EQM final: 0.24683457107343762
+Tempo de processamento: 446.6615617275238
+AUC: 0.9045017482517482
+AUC0.9: 0.7332459207459208
+Sensibilidade: 0.9615384615384616
+Especificidade: 0.6477272727272727
+Threshold: -0.6520000000000001
+Rede PMC com 2 CI - 15 e 10 neuronios
+Épocas: 4795
+EQM final: 0.2526010874665483
+Tempo de processamento: 738.0837607383728
+AUC: 0.9002768065268065
+AUC0.9: 0.7215909090909092
+Sensibilidade: 0.9615384615384616
+Especificidade: 0.6022727272727273
+Threshold: -0.6520000000000001
+Rede PMC com 1 CI - 50 neurônios
+Épocas: 2495
+EQM final: 0.2949111571650434
+Tempo de processamento: 292.66520285606384
+AUC: 0.8618152680652682
+AUC0.9: 0.5587121212121212
+Sensibilidade: 0.9615384615384616
+Especificidade: 0.48863636363636365
+Threshold: -0.5980000000000001
+Rede PMC com 1 CI - 25 neurônios
+Épocas: 3157
+EQM final: 0.3026576392871085
+Tempo de processamento: 370.91418266296387
+AUC: 0.8572261072261075
+AUC0.9: 0.5155157342657343
+Sensibilidade: 0.9615384615384616
+Especificidade: 0.4772727272727273
+Threshold: -0.562
+Rede PMC com 1 CI - 15 neurônios
+Épocas: 4162
+EQM final: 0.3077987569015663
+Tempo de processamento: 496.8857352733612
+AUC: 0.8556235431235434
+AUC0.9: 0.5148601398601398
+Sensibilidade: 0.9615384615384616
+Especificidade: 0.46590909090909083
+Threshold: -0.538
+Rede RBF - 50 neurônios
+Épocas parte inicial: 8
+Épocas parte final: 6568
+EQM: 0.3793436107130351
+Tempo de processamento: 525.4855465888977
+AUC: 0.8444055944055945
+AUC0.9: 0.6232517482517481
+Sensibilidade: 0.9615384615384616
+Especificidade: 0.3181818181818181
+Threshold: -0.264
+Rede RBF - 25 neurônios
+Épocas parte inicial: 14
+Épocas parte final: 5084
+EQM: 0.35237215125702637
+Tempo de processamento: 392.73716139793396
+AUC: 0.8323135198135203
+AUC0.9: 0.6260198135198136
+Sensibilidade: 0.9615384615384616
+Especificidade: 0.5
+Threshold: -0.32600000000000007
+Rede RBF - 15 neurônios
+Épocas parte inicial: 15
+Épocas parte final: 4470
+EQM: 0.3438018207837749
+Tempo de processamento: 331.12548089027405
+AUC: 0.8309294871794873
+AUC0.9: 0.5301573426573426
+Sensibilidade: 0.9615384615384616
+Especificidade: 0.28409090909090917
+Threshold: -0.42999999999999994
+Rede LVQ
+Épocas: 1456
+Tempo de processamento: 45.7688250541687
+Sensibilidade: 0.9342105263157895
+Especificidade: 0.34444444444444444
